@@ -1,0 +1,10 @@
+Page {
+    background-color: white;
+    font-size: 15;
+}
+
+TextField {
+    padding: 25;
+    font-size: 13;
+}
+
