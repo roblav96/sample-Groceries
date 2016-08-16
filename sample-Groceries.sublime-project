@@ -1,7 +1,7 @@
 {
 	"folders": [ {
 		"path": "./",
-		"folder_exclude_patterns": [ "node_modules", "platforms", "lib" ],
+		"folder_exclude_patterns": [ "node_modules", "platforms", "lib", "hooks" ],
 		"file_exclude_patterns": [ ".git*", "*.js" ]
 	} ]
 }
