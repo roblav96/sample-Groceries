@@ -1,32 +1,11 @@
-import {Component} from '@angular/core'
+// 
+
+import {Component} from "@angular/core";
+import {NS_ROUTER_DIRECTIVES} from "nativescript-angular/router";
 
 @Component({
-	selector: 'my-app',
-	// template: './app.component.html',
-	template: `
-		<StackLayout>
-			<Image src="res://logo_login" stretch="none" horizontalAlignment="center"></Image>
-			<TextField [(ngModel)]="email" hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
-			<TextField hint="Password" secure="true"></TextField>
-			<Button [text]="isLoggingIn ? 'Sign in' : 'Sign up'" class="submit-button" (tap)="submit()"></Button>
-			<Button [text]="isLoggingIn ? 'Sign up' : 'Back to login'" (tap)="toggleDisplay()"></Button>
-		</StackLayout>
-	`,
-	styleUrls: ["pages/login/login-common.css", "pages/login/login.css"],
+	selector: "main",
+	directives: [NS_ROUTER_DIRECTIVES],
+	template: "<page-router-outlet></page-router-outlet>"
 })
-
-export class AppComponent {
-
-	email = "nativescriptrocks@telerik.com";
-	isLoggingIn = true;
-
-	submit() {
-		console.log("You’re using: " + this.email);
-		alert("You’re using: " + this.email);
-	}
-	toggleDisplay() {
-		this.isLoggingIn = !this.isLoggingIn;
-	}
-
-}
-
+export class AppComponent { }
