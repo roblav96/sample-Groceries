@@ -9,6 +9,11 @@ import {Color} from "color";
 import {View} from "ui/core/view";
 import {setHintColor} from "../../utils/hint-util";
 import {TextField} from "ui/text-field";
+// import * as application from 'application'
+// var colors = require('ansicolors')
+// import definition = require("console");
+// import trace = require("trace");
+// declare let print: any
 
 
 
@@ -18,8 +23,6 @@ import {TextField} from "ui/text-field";
 	styleUrls: ["pages/login/login-common.css", "pages/login/login.css"],
 	providers: [UserService],
 })
-
-
 
 export class LoginPage implements OnInit {
 
@@ -37,6 +40,36 @@ export class LoginPage implements OnInit {
 		this.user = new User();
 		this.user.email = "rob@gmx.com";
 		this.user.password = "abc123";
+
+		// console.log("\n================");
+		// console.log('tnsconsole >', tnsconsole)
+		// console.dir(tnsconsole);
+		// console.log('typeof tnsconsole >', typeof tnsconsole)
+		// console.log(colors);
+		// console.dir(colors);
+		// console.log(colors.green('boobies'))
+
+		// NSLog('LIKE WTF NSLog???')
+
+		// console.log(colors.green('boobies'))
+		// console.dir(colors.green('boobies'))
+
+		// trace.write('Debug', 'BOOBIES', 1)
+
+		// global.tnsconsole.log('this.user >', this.user)
+		// global.tnsconsole.dump('this.user >', this.user)
+		global.tnsconsole.log('this.user', this.user)
+		global.tnsconsole.info('this.user.email', this.user.email)
+		global.tnsconsole.warn('this.user.password', this.user.password)
+		global.tnsconsole.error('this.user.email', this.user.email, 'this.user.password', this.user.password)
+		global.tnsconsole.error('this.user', this.user)
+		console.log("================")
+		
+		// console.log("================\n");
+
+
+
+
 	}
 
 	setTextFieldColors() {
